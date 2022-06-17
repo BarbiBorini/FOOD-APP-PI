@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.textBox{
+    border-style: double;
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.button{
+    border-style: none;
+    display: inline-block;
+    background-color: transparent;
+    color:white;
+    height: 30px;
+    font-size: 25px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 1px;
+    margin-left: 10px;
+
+}
+
+.button:hover{
+    color:rgb(82, 83, 82);
+    cursor: pointer;
+}

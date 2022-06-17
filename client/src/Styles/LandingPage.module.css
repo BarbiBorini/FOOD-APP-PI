@@ -1,0 +1,55 @@
+.background {
+    background-image: url("https://blogs.uninter.edu.mx/ENDECS/wp-content/uploads/2020/07/Restaurante-15.jpg");
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    height: 100%; 
+    position:fixed  
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.apiTitle {
+    color: white;
+    flex-direction: column;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    text-align: center;    
+    
+    /* 
+    color: rgb(247, 35, 35);
+    font-family: 'Monoton', cursive;
+    letter-spacing: 8px;
+    */
+
+
+}
+
+.button {
+    background-color: transparent;
+    flex-direction: column;
+    color: #fff;
+    font-size: 25px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    border-radius: 9999px;
+    border: #fff solid 3px;
+    padding: 25px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-top: 1px;
+    margin-top: 40px;
+    margin-left: 45%;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #220F00;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+}

@@ -1,0 +1,110 @@
+.background {
+    background-image: url("https://img.freepik.com/foto-gratis/fondo-oscuro-alimentos-verduras-especias-vista-superior-espacio-libre-texto_187166-5135.jpg?w=2000");
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    height: 100%; 
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+}
+
+
+.firstContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: baseline;
+    height: 6rem;
+    padding: 1rem;
+    background: black;
+    margin-bottom: 1rem;
+}
+
+.firstContainer:hover {
+
+}
+
+.homeTitle {
+    color: white;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-align: left;    
+    align-self: left;
+    padding-right: 50vw;
+}
+
+.button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 25px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    border-radius: 100px;
+    border: #fff solid 3px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    text-align: justify;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-left: 1rem;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #220F00;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+}
+
+.secondContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 60px;
+}
+
+.selectBar{
+    border-style: double;
+    height: 2rem;
+    width: 15vw;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.paginationContainer {
+    align-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recipeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.diet {
+    display: inline;
+}
+
+.image {
+    width: 6rem;
+    height: 6rem;
+}
+.image:hover {
+    background: #000000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #43d318, 0 0 10px #128f0b, 0 0 20px #78c247;
+    transition-delay: .1s;
+}

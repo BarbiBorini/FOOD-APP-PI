@@ -1,0 +1,69 @@
+.intro {
+    position:fixed;
+    top:0;
+    background-image: url('https://phantom-telva.unidadeditorial.es/674e9feeb3aa713f1dc9a98afe7381ab/crop/0x0/1595x1064/resize/828/f/jpg/assets/multimedia/imagenes/2022/02/14/16448757679312.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+.introButton {
+  cursor: pointer;
+  background: #eb94d0;
+    background-image: -webkit-linear-gradient(top, #eb94d0, #c8d7e0);
+  background-image: -moz-linear-gradient(top, #118d6e, #043619);
+  background-image: -ms-linear-gradient(top, #0aa023, #06492a);
+  background-image: -o-linear-gradient(top, #27bd27, #075318);
+  background-image: linear-gradient(to bottom, #21b414, #04332d);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 3px 2px 1px #a2a5ad;
+  -webkit-box-shadow: .6rem .5rem 2rem #464242;
+  -moz-box-shadow: 6rem .5rem 2rem #292626;
+  box-shadow: 6rem .5rem 2rem #181616;
+  font-family: Arial;
+  color: #000a01;
+  font-size: 3rem;
+  padding: 2rem;
+  text-decoration: none;
+}
+
+.introButton:hover {
+  color: #e7f5e8;
+  background: #2079b0;
+  background-image: -webkit-linear-gradient(top, #0b0c0c, #bbeb94);
+  background-image: -moz-linear-gradient(top, #323435, #0eb30e);
+  background-image: -ms-linear-gradient(top, #1c1e1f, #07a814);
+  background-image: -o-linear-gradient(top, #0d0f0f, #08ac23);
+  background-image: linear-gradient(to bottom, #070808, #2ea33e);
+  text-decoration: none;
+}
+
+.buttonContainer {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.introText {
+  color: rgb(246, 247, 239);
+  font-weight: bold;
+  margin: auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40vh;
+  font-size: 3.5rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #04a361, 0 0 40px #0fa323,
+  0 0 50px #0aaf5d, 0 0 60px #0aad7c, 0 0 70px #16ce90;
+}
+
+.introText p {
+  margin: 0;
+}
