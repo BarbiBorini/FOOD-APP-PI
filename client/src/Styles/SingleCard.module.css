@@ -1,29 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); */
 .mainContainer {
     display: flex;
     flex-direction: column;
     width: 18rem; 
     height: 60vh;
     align-items: center;
-    border-width: 0.2rem;
-    border-style: outset;
+    /* border-width: 0.2rem; */
+    /* border-style: outset; */
     background-size:cover;
-    border-radius: 10px;
+    border-radius: 3em;
     transition: transform .5s;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-right: 2px;
-    margin-left: 2px;
-    background-color: #32383d;
-    text-decoration: none;
+    margin-right: 1px;
+    margin-left: 1px;
+    background-color: #F9ECD9;
+    /* text-decoration: none; */
+    /* border: 5px;
+    border-color: #DFB192; */
+    /* falta agregar borde */
 }
 
 .mainContainer:hover{
-    transform: scale(1.05);
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 20px #a945c7, 0 0 40px #a945c7;
-    transition-delay: .1s;
-    color: beige;
+    transform: scale(1.1);
+    /* background: #; */
+    /* box-shadow: 0 0 10px #a945c7, 0 0 20px #a945c7, 0 0 40px #a945c7; */
+    /* transition-delay: .1s; */
+    /* color: #BC7D3A; */
 }
 
 .innerContainer{
@@ -37,7 +40,7 @@
 }
 
 .innerContainer:hover{
-    color: beige;
+    color: #BC7D3A;
 }
 
 .title {
@@ -45,26 +48,28 @@
     font-weight: bolder;
     align-items: center;
     text-decoration: none;
-    color: chartreuse;
+    color: #774824;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
 
 }
 
 .title:hover{
-    color: beige;
+    color: #BC7D3A;
 }
 
 .diets {
     font-size: 16px;
     text-decoration: none;
-    color: rgb(228, 224, 18);
+    color: #774824;
 }
 
 .diets:hover{
-    color: beige;
+    color: #BC7D3A;
 }
 
 .imagen {
     width: 18rem;
     height: 200;
-    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }

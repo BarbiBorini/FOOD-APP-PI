@@ -21,21 +21,21 @@ export default function DetailRecipe(){
             {
                 (detailRecipe.length === 0) ? 
                     <div className={styles.container}>
-                        <p className={styles.loading}>Cargando ...</p>
+                        <p className={styles.loading}>Loading...</p>
                     </div> 
                 :
                     <div className={styles.box}>
-                        <img className={styles.image} src={detailRecipe.image} alt="No Image Found"/>
+                        <img className={styles.image} src={detailRecipe.image} alt="Image not found"/>
                         <h1 className={styles.mainTitle}>{detailRecipe.title}</h1>
                         <h3 className={styles.subTitle}>Summary</h3>
                         <p className={styles.info}>{detailRecipe.summary}</p>                         
-                        <h3 className={styles.subTitle}>Putuación Spoonacular</h3>
+                        <h3 className={styles.subTitle}>Spoonacular score</h3>
                         <p className={styles.info}>{detailRecipe.spoonacularScore}</p>
-                        <h3 className={styles.subTitle}>Puntuación de salud</h3>
+                        <h3 className={styles.subTitle}>Health score</h3>
                         <p className={styles.info}>{detailRecipe.healthScore}</p>
-                        <h3 className={styles.subTitle}>Dietas</h3>
+                        <h3 className={styles.subTitle}>Diet type</h3>
                         <p className={styles.info}>{detailRecipe.diets?.map(r => (<li className={styles.diets}>{r.name} </li>))}</p>
-                        <h3 className={styles.subTitle}>Instrucciones</h3>
+                        <h3 className={styles.subTitle}>Step by step</h3>
                         <p className={styles.info}>{detailRecipe.instructions}</p>
                     </div>
                     
@@ -44,7 +44,7 @@ export default function DetailRecipe(){
             </div>
             <div className={styles.boxButton}>
                 <Link to="/home">
-                    <button className={styles.button} >Go back!</button>
+                    <button className={styles.button} >Go back</button>
                 </Link>
             </div>
         </div>

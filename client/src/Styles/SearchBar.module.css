@@ -1,32 +1,48 @@
 .container{
     display: flex;
     align-items: center;
+    background-color: #F9ECD9;
+    border-bottom-right-radius: 3em;
+    border-top-right-radius: 3em;
+    /* border-radius: 3em; */
+    width: 460px;
+    height: 3em;
 }
 
 .textBox{
-    border-style: double;
+    /* border-style: double; */
     height: 30px;
     width: 300px;
     font-size: 20px;
-    font-weight: 200;
+    /* font-weight: 200; */
+    margin-left: 35px;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+    border-style: none;
+    background-color: #F9ECD9;
+    /* color: #774824; no funciona para cambiar el color del placeholder */
 }
+
+::placeholder {
+    color: #774824;
+    border-style: none;
+  }
 
 .button{
     border-style: none;
-    display: inline-block;
+    /* display: inline-block; */
     background-color: transparent;
-    color:white;
-    height: 30px;
+    color:#774824;
+    /* height: 30px; */
     font-size: 25px;
-    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
     cursor: pointer;
     transition-duration: 0.4s;
-    margin-top: 1px;
-    margin-left: 10px;
+    /* margin-top: 1px; */
+    /* margin-left: 15px; */
 
 }
 
 .button:hover{
-    color:rgb(82, 83, 82);
+    color: #E2C0A4;
     cursor: pointer;
 }

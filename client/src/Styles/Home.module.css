@@ -1,13 +1,14 @@
 .background {
-    background-image: url("https://img.freepik.com/foto-gratis/fondo-oscuro-alimentos-verduras-especias-vista-superior-espacio-libre-texto_187166-5135.jpg?w=2000");
+    /* background-image: url("https://img.freepik.com/foto-gratis/fondo-oscuro-alimentos-verduras-especias-vista-superior-espacio-libre-texto_187166-5135.jpg?w=2000");
     background-position: center; 
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     width: 100%;
     overflow: hidden;
     height: 100%; 
     scroll-behavior: smooth;
     background-attachment: fixed;
+    background-color: #E2C0A4;
 }
 
 
@@ -16,45 +17,43 @@
     flex-direction: row;
     align-items: center;
     justify-content: baseline;
-    height: 6rem;
+    height: 4rem;
     padding: 1rem;
-    background: black;
+    background: #DFB192;
     margin-bottom: 1rem;
 }
 
-.firstContainer:hover {
 
-}
 
-.homeTitle {
+/* .homeTitle {
     color: white;
-    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
     font-size: 3rem;
     text-align: left;    
     align-self: left;
     padding-right: 50vw;
-}
+} */
 
 .button {
-    background-color: transparent;
-    color: #fff;
+    background-color: #774824;
+    color: #F9ECD9;
     font-size: 25px;
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    border-radius: 100px;
-    border: #fff solid 3px;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+    border-radius: 3em;
+    border: none;
     cursor: pointer;
     transition-duration: 0.4s;
-    text-align: justify;
     padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 15px;
-    margin-left: 1rem;
+    margin-left: 76rem;
+    
 }
 
 .button:hover {
-    background-color: #fff;
-    color: #220F00;
+    background-color: #E2C0A4;
+    color: #774824;
     transition-delay: 0.2s;
     transition: 0.8s;
 }
@@ -68,12 +67,45 @@
 }
 
 .selectBar{
-    border-style: double;
-    height: 2rem;
-    width: 15vw;
-    font-size: 1rem;
-    font-weight: 200;
-    margin-bottom: 1rem;
+    /* border-style: double; */
+    background-color: #F9ECD9;
+    color: #774824;
+    /* border-color: #774824; */
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+    height: 3rem;
+    width: 350px;
+    /* padding: 20px; */
+    /* font-size: 1rem; */
+    /* font-weight: 20; */
+    /* margin-bottom: 1rem; */
+    border-style: none;
+    /* border-radius: 3em; */
+    /* border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em; */
+    font-size: 20px;
+    padding-left: 25px;
+    /* padding-right: 20px; */
+}
+
+.selectBarAlph{
+    /* border-style: double; */
+    background-color: #F9ECD9;
+    color: #774824;
+    /* border-color: #774824; */
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+    height: 3rem;
+    width: 350px;
+    /* padding: 20px; */
+    /* font-size: 1rem; */
+    /* font-weight: 20; */
+    /* margin-bottom: 1rem; */
+    border-style: none;
+    /* border-radius: 3em; */
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    font-size: 20px;
+    padding-left: 25px;
+    /* padding-right: 20px; */
 }
 
 .paginationContainer {
@@ -99,12 +131,12 @@
 }
 
 .image {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
 }
-.image:hover {
-    background: #000000;
+/* .image:hover {
+    background: #BC7D3A;
     border-radius: 50%;
-    box-shadow: 0 0 10px #43d318, 0 0 10px #128f0b, 0 0 20px #78c247;
+    box-shadow: 0 0 30px #f09c0b, 0 0 10px #e27704, 0 0 20px #e3b727;
     transition-delay: .1s;
-}
+} */

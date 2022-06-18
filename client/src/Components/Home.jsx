@@ -7,7 +7,7 @@ import Card from "./SingleCard";
 import Paginado from "./Paginado";
 import SearchBar from "./SearchBar";
 import styles from "../Styles/Home.module.css"
-import imagen from "../../src/assets/logo_food.png";
+import logo from "../../src/assets/calcifer.png";
 
 export default function Home(){
     
@@ -60,26 +60,24 @@ export default function Home(){
     return (
         <div className={styles.background}>
             <div className={styles.firstContainer}>
-                <Link to="/"><img src={imagen} className={styles.image}/></Link>
+                <Link to="/"><img src={logo} className={styles.image}/></Link>
                 <Link to="/create">
-                    <button className={styles.button}>Crear Receta</button>
+                    <button className={styles.button}>Create recipe</button>
                 </Link>
             </div>
             <div className={styles.secondContainer}>
-                <select className={styles.selectBar} onChange={(e) => handleSortedRecipesTitle(e)}>
-                    <option value="" >Seleccione el orden</option>
+                <select className={styles.selectBarAlph} onChange={(e) => handleSortedRecipesTitle(e)}>
+                    <option value="" >Alphabetical order</option>
                     <option value="Asc">A to Z</option>
                     <option value="Desc">Z to A</option>
-
-
                 </select>
                 <select className={styles.selectBar} onChange={(e) => handleSortedRecipesSpoonScore(e)}>
-                    <option value="" >Seleccionar puntuación</option>
-                    <option value="SpoonacularMax">Max Spoonacular Score</option>
-                    <option value="SpoonacularMin">Min Spoonacular Score</option>
+                    <option value="" >Order by score</option>
+                    <option value="SpoonacularMax">Higher score</option>
+                    <option value="SpoonacularMin">Lower score</option>
                 </select>
                 <select className={styles.selectBar} onChange={e => handleFilteredDiet(e)}>
-                    <option value="">Seleccionar dietas</option>
+                    <option value="">Filter by diet type</option>
                     {allDiets?.map(diet => {
                         return ( <option value={diet.name}>{diet.name}</option>)
                     })
