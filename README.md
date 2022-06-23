@@ -1,10 +1,11 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
-
-# Individual Project - Henry Food
+## Individual Project - Henry 
+# Recipe App
+## Barbara Borini
 
 <p align="right">
   <img height="200" src="./calcifer.png" />
 </p>
+
 
 ## Objetivos del Proyecto
 
@@ -14,60 +15,13 @@
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
 
-## Horarios y Fechas
 
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
 
-## Comenzando
 
- 1. Forkear el repositorio para tener una copia del mismo en sus cuentas
- 2. Clonar el repositorio en sus computadoras para comenzar a trabajar
 
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
+El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas está el código del back-end y el front-end respectivamente.
 
-__IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
-
-Actualmente las versiónes necesarias son:
-
-- __Node__: 12.18.3 o mayor
-- __NPM__: 6.14.16 o mayor
-
-Para verificar que versión tienen instalada:
-
-```bash
-node -v
-npm -v
-```
-
-__ACLARACIÓN:__ Las dependencias actuales se encuentran en las versiones que venimos trabajando durante el bootcamp.
-
-Versiones:
-
-- __react__: 17.0.1
-- __react-dom__: 17.0.1
-- __react-router-dom__: 5.2.0
-- __redux__: 4.0.5
-- __react-redux__: 7.2.3
-
-Está permitido, __bajo su responsabilidad__, actualizar las dependencias a versiones más actuales.
-
-> __IMPORTANTE:__ Versiones mas actuales podrían presentar configuraciones diferentes respecto a las versiones en las que venimos trabajando durante el bootcamp.
-
-## BoilerPlate
-
-El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
-
-En `api` crear un archivo llamado: `.env` que tenga la siguiente forma:
-
-```env
-DB_USER=usuariodepostgres
-DB_PASSWORD=passwordDePostgres
-DB_HOST=localhost
-```
-
-Reemplazar `usuariodepostgres` y `passwordDePostgres` con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
-
-Adicionalmente será necesario que creen desde psql una base de datos llamada `food`
+Adicionalmente see crea desde PSQL una base de datos llamada `food`.
 
 El contenido de `client` fue creado usando: Create React App.
 
@@ -76,17 +30,16 @@ El contenido de `client` fue creado usando: Create React App.
 La idea general es crear una aplicación en la cual se puedan ver distintas recetas de comida junto con información relevante de las mismas utilizando la api externa [spoonacular](https://spoonacular.com/food-api) y a partir de ella poder, entre otras cosas:
 
 - Buscar recetas
-- Filtrarlos / Ordenarlos
-- Crear nuevas recetas propias
+- Filtrarlas y ordenarlas
+- Añadir nuevas recetas propias
 
-__IMPORTANTE__: Para poder utilizar esta API externa es necesario crearse una cuenta para obtener una API Key que luego debera ser incluida en todos los request que hagamos a spoonacular simplemente agregando `?apiKey={YOUR_API_KEY}` al final de cada endpoint. Agregar la clave en el archivo `.env` para que la misma no se suba al repositorio por cuestiones de seguridad y utilizarla desde allí. Por otro lado tienen un límite de requests por día por lo que usenlos con cuidado!
 
-__IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden utilizar los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados sino que deben realizarlo ustedes mismos. En particular alguno de los ordenamientos o filtrados debe si o si realizarse desde el frontend.
+Para las funcionalidades de filtrado y ordenamiento no se pueden utilizar los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados, sino que se deben realizar manualmente. En particular alguno de los ordenamientos o filtrados debe si o si realizarse desde el frontend.
 
-### Únicos Endpoints/Flags que pueden utilizar
+### Únicos Endpoints/Flags que se pueden utilizar
 
 - GET <https://api.spoonacular.com/recipes/complexSearch>
-  - Para obtener mayor información sobre las recetas, como por ejemplo el tipo de dieta deben agregar el flag `&addRecipeInformation=true` a este endpoint
+  - Para obtener mayor información sobre las recetas, como por ejemplo el tipo de dieta, se debe agregar el flag `&addRecipeInformation=true` a este endpoint
   - Para los tipos de dieta deben tener en cuenta las propiedades vegetarian, vegan, glutenFree por un lado y también analizar las que se incluyan dentro de la propiedad `diets`
 - GET <https://api.spoonacular.com/recipes/{id}/information>
 
@@ -182,8 +135,16 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
   - Obtener todos los tipos de dieta posibles
   - En una primera instancia, cuando no exista ninguno, deberán precargar la base de datos con los tipos de datos indicados por spoonacular [acá](https://spoonacular.com/food-api/docs#Diets)
 
-## Testing
+Ejemplos:
+http://localhost:3001/recipes
+Devuelve un  array con todas las recetas
 
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+http://localhost:3001/recipes?name=nombre
+Devuelve un array con la informacion de las recetas que contengan en su titulo la palabra ingresada.
+
+http://localhost:3001/recipes/id
+Devuelve un objeto con la informacion de la receta cuyo Id sea el ingresado. Si encuentra ninguna receta con ese Id, devuelve el mensaje "Recipe by Id doesn´t exist".
+
+http://localhost:3001/types
+Devuelve un Array con todos los tipos de dietas.
+

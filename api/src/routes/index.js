@@ -11,6 +11,6 @@ const typesDietRoute = require("./typesDiets");
 // Ejemplo: router.use('/auth', authRouter);
 
 router.use("/recipes", recipesRoute)
-router.use("/diets", typesDietRoute)
+router.use("/types", typesDietRoute)
 
 module.exports = router;

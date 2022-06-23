@@ -3,12 +3,12 @@ const router = Router()
 const { getAllRecipes, searchById } = require("../Controllers/recipes");
 const { Recipe } = require("../db");
 
-router.get("/", async (req,res,next) =>{ // ver si sin "/" funciona
+router.get("/", async (req,res,next) =>{ 
     try {
-        const name = req.query.name
+        const { name }= req.query
         const allRecipes = await getAllRecipes()
         if(name){
-             let recipe = allRecipes.filter(recipe => recipe.title?.toLowerCase().includes(name.toString().toLowerCase()))
+             let recipe = allRecipes.filter(recipe => recipe.title.toLowerCase().includes(name.toString().toLowerCase()))
             if(recipe.length){
                 res.status(200).send(recipe)
             } else {
@@ -41,12 +41,11 @@ router.get("/:idRecipe", async(req,res,next) => {
 
 router.post("/create", async (req,res,next) => {
     try {
-        const {title, summary, spoonacularScore, healthScore, instructions, image, diets} = req.body
+        const {title, summary, healthScore, instructions, image, diets} = req.body
 
         const recipeCreate = await Recipe.create({
             title,
             summary,
-            spoonacularScore,
             healthScore,
             instructions,
             image

@@ -17,13 +17,6 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING(1000),
       allowNull: false
     },
-    spoonacularScore: {
-      type: DataTypes.FLOAT(1),
-      validate: {
-        min: 0,
-        max: 100
-      }
-    },
     healthScore:{
       type: DataTypes.FLOAT(1),
       allowNull: false,

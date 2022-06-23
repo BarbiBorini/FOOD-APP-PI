@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch , useSelector } from "react-redux"
-import { getRecipes, getDetail, getDiets , filteredByDiet, orderByTitle, orderBySpoonacularScore} from "../Redux/actions";
+import { getRecipes, getDetail, getDiets , filteredByDiet, orderByTitle, orderByScore} from "../Redux/actions";
 import { Link } from "react-router-dom"
 import Card from "./SingleCard";
 import Paginado from "./Paginado";
@@ -34,8 +34,8 @@ export default function Home(){
         setCurrentPage(pageNumber)
     }
     
-    const [order,setOrder] = useState("")
-    const [score,setScore] = useState("")
+    const [order, setOrder] = useState("")
+    // const [score, setScore] = useState("")
 
     function handleFilteredDiet(e){
         dispatch(filteredByDiet(e.target.value))
@@ -50,12 +50,13 @@ export default function Home(){
         e.preventDefault()
     }
 
-    function handleSortedRecipesSpoonScore(e){
-        dispatch(orderBySpoonacularScore(e.target.value))
+    function handleSortedRecipesScore(e){
+        dispatch(orderByScore(e.target.value))
         setCurrentPage(1)
-        setScore(e.target.value)
+        setOrder(`Order ${e.target.value}`)
         e.preventDefault()
     }
+
 
     return (
         <div className={styles.background}>
@@ -67,21 +68,38 @@ export default function Home(){
             </div>
             <div className={styles.secondContainer}>
                 <select className={styles.selectBarAlph} onChange={(e) => handleSortedRecipesTitle(e)}>
-                    <option value="" >Alphabetical order</option>
+                    <option disabled selected>Alphabetical order</option>
                     <option value="Asc">A to Z</option>
                     <option value="Desc">Z to A</option>
                 </select>
-                <select className={styles.selectBar} onChange={(e) => handleSortedRecipesSpoonScore(e)}>
-                    <option value="" >Order by score</option>
-                    <option value="SpoonacularMax">Higher score</option>
-                    <option value="SpoonacularMin">Lower score</option>
+
+               {/* original */}
+                <select className={styles.selectBar} name="numerical" onChange={(e) => handleSortedRecipesScore(e)}>
+                <option disabled selected>Order by  Health Score</option>
+                    <option value="HealthMax">From Min to Max</option>
+                    <option value="HealthMin">From Max to Min</option>
                 </select>
+                {/* nueva */}
+                {/* <select className={styles.selectBar} name="numerical" onChange={e => handleSortedRecipesSpoonScore(e)}>
+                    <option disabled selected>Order by score</option>
+                    <option value="asc">From Min to Max</option>
+                    <option value="desc">From Max to Min</option>
+                </select> */}
                 <select className={styles.selectBar} onChange={e => handleFilteredDiet(e)}>
-                    <option value="">Filter by diet type</option>
-                    {allDiets?.map(diet => {
-                        return ( <option value={diet.name}>{diet.name}</option>)
-                    })
-                }
+                    <option disabled selected>Filter by diet type</option>
+                    <option value="gluten free">Gluten Free</option>
+                    <option value="ketogenic">Keto</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="lacto vegetarian">Lacto-Vegetarian</option>
+                    <option value="ovo vegetarian">Ovo-Vegetarian</option>
+                    <option value="lacto ovo vegetarian">Lacto-Ovo-Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="pescetarian">Pescetarian</option>
+                    <option value="paleolithic">Paleo</option>
+                    <option value="primal">Primal</option>
+                    <option value="low fodmap">Low FODMAP</option>
+                    <option value="whole 30">Whole30</option>
+                    <option value="dairy free">Dairy Free</option>
                 </select>
                 <SearchBar></SearchBar>
             </div>

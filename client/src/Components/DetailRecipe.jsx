@@ -29,8 +29,6 @@ export default function DetailRecipe(){
                         <h1 className={styles.mainTitle}>{detailRecipe.title}</h1>
                         <h3 className={styles.subTitle}>Summary</h3>
                         <p className={styles.info}>{detailRecipe.summary}</p>                         
-                        <h3 className={styles.subTitle}>Spoonacular score</h3>
-                        <p className={styles.info}>{detailRecipe.spoonacularScore}</p>
                         <h3 className={styles.subTitle}>Health score</h3>
                         <p className={styles.info}>{detailRecipe.healthScore}</p>
                         <h3 className={styles.subTitle}>Diet type</h3>

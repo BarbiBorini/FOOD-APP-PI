@@ -1,13 +1,16 @@
 const { Router } = require('express');
-const { Diet } = require("../db");
-const { Op } = require('sequelize');
-
-const router = Router();
-
+const router = Router()
+const { Diet } = require("../db")
+const { preLoadDiets } = require('../Controllers/diets')
 
 router.get("/", async (req,res,next) => {
     try {
-        let dietDb = await Diet.findAll()
+        preLoadDiets.forEach(e => {
+            Diet.findOrCreate({
+                where: { name: e}
+            })
+        });
+        const dietDb = await Diet.findAll()
         res.status(200).send(dietDb)
         
     } catch (error) {

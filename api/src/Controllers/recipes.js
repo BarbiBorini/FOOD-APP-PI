@@ -12,7 +12,6 @@ const getApiRecipes = async() =>{
             title: element.title,
             image: element.image,
             summary: element.summary,
-            spoonacularScore: element.spoonacularScore,
             healthScore: element.healthScore,
             diets: element.diets.map(each => ({ name: each })),
             dishTypes: element.dishTypes, 
@@ -29,7 +28,7 @@ const getDataBaseInfo = async () => {
             attributes: ["name"],
             through: {
                 attributes: []
-            } //ver si la sintaxis esta bien escrita
+            } 
         }
      })
 }
@@ -38,7 +37,7 @@ const getAllRecipes = async () => {
     const apiRecipesProm = getApiRecipes()
     const dbInfoProm = getDataBaseInfo()
 
-    const [apiRecipes, dbInfo] = await Promise.all([apiRecipesProm, dbInfoProm]) // me conviene asi?? o allinfo = apiRecipes.concat(DbInfo)?? 
+    const [apiRecipes, dbInfo] = await Promise.all([apiRecipesProm, dbInfoProm])
 
     return [...apiRecipes, ...dbInfo];
 }
@@ -52,7 +51,6 @@ const searchByIdAtApi = async(id)=>{
             title: detail.title,
             image: detail.image,
             summary: detail.summary.replace(/<[^>]*>?/g, ''),
-            spoonacularScore: detail.spoonacularScore,
             healthScore: detail.healthScore,
             diets: detail.diets.map(each => ({ name: each })),
             instructions: detail.instructions.replace(/<[^>]*>?/g, '')
@@ -71,7 +69,7 @@ const searchByIdAtDB = async (id) => {
                 attributes: ["name"],
                 through: {
                     attributes: []
-                } //ver si la sintaxis esta bien escrita
+                } 
             }
          })
         return recipe
